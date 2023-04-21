@@ -1,0 +1,65 @@
+<div class="card text-center mt-5" *ngIf="mostrarDatos">
+  <div class="card-header">
+    <mat-icon>audiotrack</mat-icon> A ver si esta referencia es de tu talla <mat-icon>audiotrack</mat-icon>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title"><mat-icon>sentiment_very_satisfied</mat-icon></h5>
+    <div class="card-text">
+      <p>Si perdiera el arcoiris su belleza</p>
+      <p> y las flores su perfume y su color</p>
+      <p> No sería tan inmensa mi tristeza</p>
+      <input class="input text-center" type="text" maxlength="38" [ngModelOptions]="{standalone: true}"
+        [(ngModel)]="rta">
+    </div>
+    <button href="#" class="btn btnAct1 m-4" (click)="varificarRta()"><mat-icon class="">whatshot</mat-icon>
+      Verificar</button>
+    <button href="#" [ngClass]="{'ocultar' : ocultar}" [routerLink]="['/acto2']" class="btn btnAct1 m-4">
+      <mat-icon>arrow_right</mat-icon></button>
+  </div>
+  <div class="card-footer text-muted">
+    ¡Sé que puedes!
+  </div>
+</div>
+<!-- Button trigger modal -->
+<button id="btnModal" type="button" class="btn btn-primary ocultar" data-bs-toggle="modal"
+  data-bs-target="#exampleModal">
+  Lanzar demo de modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-center w-100" id="exampleModalLabel" *ngIf="ocultar else tituloMal">
+          <mat-icon>sentiment_very_dissatisfied</mat-icon>Vamos, una vez más...</h5>
+
+        <ng-template #tituloMal>
+          <h5 class="modal-title text-center w-100" id="exampleModalLabel">Sabía que lo lograrías
+            <mat-icon>favorite</mat-icon></h5>
+        </ng-template>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <section *ngIf="!ocultar else rtaMala">
+          <mat-icon>tag_faces</mat-icon>
+          <p>Desde el primer momento en que te vi me sabía que merecías lo mejor de los mejor, siempre intento estar a
+            la altura y esta es una de las razones por las que decidí dedicarte esta pequeña pero hermosa obra de arte
+            como tú.</p>
+          <iframe width="450" height="300" src="https://www.youtube.com/embed/jBt_I4aMwMk"
+            title="Cuco - Piel Canela (Letra)" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+        </section>
+        <ng-template #rtaMala>
+          <section>
+            <mat-icon class="iconoMal">error</mat-icon>
+          </section>
+        </ng-template>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btnAct1" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>

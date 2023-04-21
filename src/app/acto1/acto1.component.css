@@ -1,0 +1,30 @@
+.input{
+    border: 0;
+    width: 47%;
+    border-bottom: 2px solid #e64c4c;
+    border-radius: 5px;
+}
+
+.input:focus{
+    border: 0;
+    outline:none !important;
+    outline-offset: 0;
+    border-bottom: 2px solid #e64c4c;
+    border-radius: 5px 
+}
+
+.btnAct1{
+    background: #e64c4c;
+    /* border-color: #f7e7e6; */
+    color: white;
+}
+
+.ocultar{
+    display: none !important;
+}
+
+.iconoMal{
+    height: 30%;
+    font-size: 141px;
+    width: 30%;
+}

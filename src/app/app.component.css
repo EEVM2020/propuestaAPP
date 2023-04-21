@@ -1,0 +1,14 @@
+html{
+    position: relative;
+}
+
+body{
+    font-family: cursive !important;
+}
+
+.divAjusteFooter{
+    min-height: 93%;
+    padding-bottom: 10px;
+}
+
+

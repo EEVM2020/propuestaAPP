@@ -1,0 +1,17 @@
+<div class="card text-center mt-5" *ngIf="mostrarDatos">
+    <div class="card-header">
+        <mat-icon>history</mat-icon>Un recuerdo de nuestros momentos...
+    </div>
+    <div class="card-body">
+        <h5 class="card-title"><mat-icon> local_play</mat-icon></h5>
+        <div class="card-text">
+            <iframe style="width: 50%;min-width: 300px;" height="300" src="../../assets/videos/video.mp4" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+        </div>
+
+        <button href="#" [routerLink]="['/acto4']" class="btn btnAct3 m-4">
+            <mat-icon>arrow_right</mat-icon></button>
+    </div>
+
+</div>

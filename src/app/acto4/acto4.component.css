@@ -1,0 +1,38 @@
+.imgCupon{
+    max-width: 200px
+}
+
+.cupon{
+    padding: 20px;
+    border: #f9ba1b solid 2px;
+    border-style: dashed;
+    background: #f6b91c1c;
+    border-radius: 11px;
+}
+
+.condiciones{
+    font-size: 12px;
+    color: #13121275;
+    margin-bottom: 0px;
+}
+
+.btnAct4{
+    border: #f9ba1b solid 2px;
+}
+
+.btnOk{
+    background: #3bbec0 !important;
+    border-color: #3bbec0!important;
+    color: white !important;
+}
+
+.btnGenerar{
+    background: #e64c4c;
+    border-color: #e64c4c;
+    color: white;
+}
+
+.fondoRta4{
+    background-color: #f0c28569;
+    border-color: #fe8282 !important;
+}

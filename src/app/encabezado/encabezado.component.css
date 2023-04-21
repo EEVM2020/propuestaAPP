@@ -1,0 +1,43 @@
+
+.bg-encabezado{
+    background: #fe8282 !important;
+}
+
+.bg-subMenu {
+    background: #e54a4afa !important;
+}
+
+.bordeBtn {
+    border-color: white;
+}
+
+.bg-submenu{
+    background:#fe8282 !important;
+    color: white;
+}
+
+.titulo{
+   margin-left: 40%; 
+}
+.icono{
+    font-size: large;
+}
+
+.ajEncabezado {
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+.iconLista{
+    font-size: 19px;
+    padding-top: 5px;
+}
+
+
+@media (max-width: 600px) {
+    .titulo{
+        margin-left: 20%; 
+     }
+  }

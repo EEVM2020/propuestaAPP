@@ -1,0 +1,25 @@
+<nav class="navbar navbar-dark bg-encabezado ajEncabezado">
+    <div class="container-fluid">
+      <p class="h1 titulo"><a class="navbar-brand" href="#">LA PROPUESTA APP<mat-icon class="p-1 h5">favorite</mat-icon></a></p>
+      <button class="navbar-toggler bordeBtn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="offcanvas offcanvas-end bg-submenu" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+        <div class="offcanvas-header bg-subMenu">
+          <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">La Propuesta App<mat-icon class="p-1 h5">favorite</mat-icon></h5>
+          <button type="button" class="btn-close btn-close-white " data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active"  [routerLink]="['/acto1']" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"><mat-icon class="iconLista">star_border</mat-icon> Inicio</a>
+              <a class="nav-link active" aria-current="page" [routerLink]="['/acto2']" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"><mat-icon class="iconLista">star_border</mat-icon>Acto Uno</a>
+              <a class="nav-link active" aria-current="page" [routerLink]="['/acto3']" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"><mat-icon class="iconLista">star_border</mat-icon>Acto Dos</a>
+              <a class="nav-link active" aria-current="page" [routerLink]="['/acto4']" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"><mat-icon class="iconLista">star_border</mat-icon>Acto Tres</a>
+            </li>     
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>

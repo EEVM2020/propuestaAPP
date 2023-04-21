@@ -1,0 +1,100 @@
+<div *ngIf="mostrarDatos">
+
+
+  <div class="row d-flex justify-content-center">
+    <div class="col-12 d-flex justify-content-center">
+      <div class="card m-5 " style="width: 18rem;">
+        <div class="card-body text-center">
+          <h5 class="card-title text-center">La pregunta...</h5>
+          <p class="card-text">¡¡Dime preciosa y responde muy a conciencia !!...</p>
+          <p class=" mb-2"><mat-icon>wc</mat-icon></p>
+          <p>¿Te gustaria ser mi novia ?</p>
+          <button class="btn btn-danger m-4 " (click)="mostrarCupon=false" data-bs-toggle="modal"
+            data-bs-target="#modalCupon">no <mat-icon>error_outline</mat-icon></button>
+          <button class="btn btn-primary m-4 btnOk" (click)="mostrarCupon=true">SI
+            <mat-icon>favorite_border</mat-icon></button>
+
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="mostrarCupon" class="col-10 border border-2 rounded-2 mt-5 fondoRta4">
+      <h3 class="text-center m-2">¡Te amo preciosa!</h3>
+      <p class="p-3">Gracias por la decidir continuar siendo mi novia, enserio he paso muchos momentos hermosos con tigo
+        y me alegra un montón que continúe siendo así,
+        ahora tienes el derecho a un cupón con el que podremos ir en el momento que quieres por un mcflurry y compartir
+        otro lindo momento juntos, espero te guste.</p>
+      <button class="btn m-4 btnGenerar" data-bs-toggle="modal" (click)="generarCupon()"
+        data-bs-target="#modalCupon">Generar</button>
+    </div>
+
+  </div>
+
+
+  <div class="modal fade" id="modalCupon" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-center w-100">{{ mostrarCupon===false?'Intenta de nuevo.':'Cupón!!'}}</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center  m-4">
+          <section *ngIf="mostrarCupon else rtaNo" class="cupon" id="cuerpoCupon">
+            <mat-icon>card_giftcard</mat-icon>
+            <h5>Cupón válido para compartir mcfurry</h5>
+            <p class="mt-3" style="margin-bottom: 0px;">
+              <mat-icon>stars</mat-icon><mat-icon>stars</mat-icon><mat-icon>stars</mat-icon>
+            </p>
+            <p>En agradecimiento a tu respuesta es de mi agrado informarte que eres acreedora
+              de este cupón de regalo de un mcfurry para ser redimido cuando el poseedor lo decida
+            </p>
+            <p class="mb-1"><mat-icon>stars</mat-icon><mat-icon>stars</mat-icon><mat-icon>stars</mat-icon></p>
+            <img class="img-thumbnail imgCupon" src="../../assets/imagenes/mcFurry.webp" />
+            <p class="condiciones mt-4">Válido hasta: no tiene fecha de caducidad</p>
+            <p class="condiciones">Uso único.</p>
+            <p class="condiciones" style="text-align: end;">Generado el {{fechaActual}}</p>
+            <p class="condiciones" style="text-align:start;">{{texto}}</p>
+          </section>
+
+          <ng-template #rtaNo>
+            <p><mat-icon>warning</mat-icon></p>
+            <p>Respuesta no aceptada.</p>
+            <p><mat-icon>warning</mat-icon></p>
+          </ng-template>
+
+        </div>
+        <div class="modal-footer">
+          <button *ngIf="mostrarCupon" type="button" class="btn btnAct4" (click)="descargarCupon()"
+            data-bs-dismiss="modal">Decargar</button>
+          <button *ngIf="!mostrarCupon" type="button" class="btn btnAct4" data-bs-dismiss="modal">Cerrar</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!--Button trigger modal -->
+  <div id="btnModalCredenciales" data-bs-toggle="modal" data-bs-target="#modalCredenciales"></div>
+
+  <div class="modal fade" id="modalCredenciales" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-center w-100">Credenciales!!<mat-icon>lock</mat-icon></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center  m-4 cupon">
+          <p>Con las siguientes credenciales podrás ingresar nuevamente a nuestra Propuesta APP </p>
+          <p><mat-icon>lock</mat-icon><mat-icon> vpn_key</mat-icon><mat-icon> lock_open</mat-icon></p>
+          <p>Usuario: {{this.back.usuario}} </p>
+          <p>Clave: {{clave}}</p>
+          <p>Guárdalas muy bien, te amo <mat-icon>favorite_border</mat-icon></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btnAct4" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

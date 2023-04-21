@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: cursive !important;
+}
+
+
+.btnIniciar {
+    background: #e64c4c !important;
+    /* border-color: #f7e7e6; */
+    color: white !important;
+}
+
+.alerta {
+    padding: 0px !important;
+    font-size: 12px !important;
+    width: 50%;
+}
+
+.ocularContenido {
+    display: none;
+}
+
